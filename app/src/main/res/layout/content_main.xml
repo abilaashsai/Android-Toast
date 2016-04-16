@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:fillViewport="false"
     tools:showIn="@layout/activity_main"
-    android:background="#CFD8DC">
+    android:background="@color/background">
     xmlns:android="http://schemas.android.com/apk/res/android" />
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
