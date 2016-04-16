@@ -13,52 +13,18 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    public void clickOnBtn(View view) {
+        Button btn = (Button)view;
+        Toast.makeText(getApplicationContext(), getString(R.string.scores_toast)+" "+(String) btn.getText()  , Toast.LENGTH_SHORT).show();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button popular_m=(Button)findViewById(R.id.popular_movies);
-        Button stock_h=(Button)findViewById(R.id.stock_hawk);
-        Button build_it=(Button)findViewById(R.id.build_it_bigger);
-        Button make_your=(Button)findViewById(R.id.make_your_app_material);
-        Button go_ub=(Button)findViewById(R.id.go_ubiquitous);
-        Button caps=(Button)findViewById(R.id.capstone);
-        caps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This button will launch my capstone app!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        go_ub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This button will launch my go ubiquitous app!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        make_your.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This button will launch my make your app material app!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        build_it.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This button will launch my build it bigger app!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        stock_h.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This button will launch my stock hawk app!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        popular_m.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This button will launch my popular movies app!",Toast.LENGTH_SHORT).show();
-            }
-        });
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -68,7 +34,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+
             }
+
         });
     }
 
